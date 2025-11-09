@@ -15,7 +15,7 @@ class Director implements DirectorInterface {
     return "Working from home";
   }
 
-  getCoffeeBreak(): string {
+  getToWork(): string {
     return "Getting a coffee break";
   }
 
@@ -45,12 +45,6 @@ function createEmployee(salary: number | string): Director | Teacher {
     return new Director();
   }
 }
-
-const emp1 = createEmployee(200);
-console.log(emp1.workFromHome());
-
-const emp2 = createEmployee(1000);
-console.log(emp2.workFromHome());
 
 interface Teacher {
   firstName: string;
