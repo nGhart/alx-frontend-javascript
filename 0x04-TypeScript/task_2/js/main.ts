@@ -38,8 +38,8 @@ class Teacher implements TeacherInterface {
   }
 }
 
-function createEmployee(salary: number | string): Director | Teacher {
-  if (typeof salary === "number" && salary < 500) {
+function createEmployee(salary: number ): Director | Teacher {
+  if (salary < 500) {
     return new Teacher();
   } else {
     return new Director();
@@ -80,7 +80,7 @@ function executeWork(employee: Teacher | Director): string {
 
 type Subjects = "Math" | "History";
 
-function teachClass(todayClass: Subjects): string {
+function teachClass(todayClass:Subjects): string {
   if (todayClass === "Math") {
     return "Teaching Math";
   } else if (todayClass === "History") {
